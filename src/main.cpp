@@ -7,27 +7,24 @@
 #include "Octagon.h"
 
 void printMenu() {
-    std::cout << "1. Add Pentagon" << std::endl;
-    std::cout << "2. Add Hexagon" << std::endl;
-    std::cout << "3. Add Octagon" << std::endl;
-    std::cout << "4. Remove figure by index" << std::endl;
-    std::cout << "5. Print all figures" << std::endl;
-    std::cout << "6. Print all centers" << std::endl;
-    std::cout << "7. Print all areas" << std::endl;
-    std::cout << "8. Print total area" << std::endl;
-    std::cout << "9. Exit" << std::endl;
+    std::cout << "1. Print all figures" << std::endl;
+std::cout << "2. Add Pentagon" << std::endl;
+std::cout << "3. Print all areas" << std::endl;
+std::cout << "4. Add Hexagon" << std::endl;
+std::cout << "5. Remove figure by index" << std::endl;
+std::cout << "6. Print total area" << std::endl;
+std::cout << "7. Add Octagon" << std::endl;
+std::cout << "8. Print all centers" << std::endl;
+std::cout << "9. Exit" << std::endl;
 
 }
 
-int main() {
+int main(){
     Array figures;
     int choice;
-
-    
     while (true) {
         printMenu();
         std::cin >> choice;
-        
         switch (choice) {
             case 1: {
                 std::cout << "Enter pentagon side length: ";
