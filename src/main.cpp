@@ -6,27 +6,32 @@
 #include "Hexagon.h"
 #include "Octagon.h"
 
+// Функция для вывода меню пользователя
 void printMenu() {
-    std::cout << "1. Print all figures" << std::endl;
-std::cout << "2. Add Pentagon" << std::endl;
-std::cout << "3. Print all areas" << std::endl;
-std::cout << "4. Add Hexagon" << std::endl;
-std::cout << "5. Remove figure by index" << std::endl;
-std::cout << "6. Print total area" << std::endl;
-std::cout << "7. Add Octagon" << std::endl;
-std::cout << "8. Print all centers" << std::endl;
-std::cout << "9. Exit" << std::endl;
-
+    std::cout << "1. Print all figures" << std::endl;     // Вывод всех фигур
+    std::cout << "2. Add Pentagon" << std::endl;          // Добавить пятиугольник
+    std::cout << "3. Print all areas" << std::endl;       // Вывести площади всех фигур
+    std::cout << "4. Add Hexagon" << std::endl;          // Добавить шестиугольник
+    std::cout << "5. Remove figure by index" << std::endl;   // Удалить фигуру по индексу
+    std::cout << "6. Print total area" << std::endl;    // Вывести общую площадь
+    std::cout << "7. Add Octagon" << std::endl;          // Добавить восьмиугольник
+    std::cout << "8. Print all centers" << std::endl;     // Вывести центры всех фигур
+    std::cout << "9. Exit" << std::endl;                    // Выход из программы
 }
 
 int main(){
-    Array figures;
-    int choice;
+    Array figures;        // Создаем массив для хранения фигур
+    int choice;           // Переменная для выбора пользователя
+    
+    // Бесконечный цикл меню
     while (true) {
-        printMenu();
-        std::cin >> choice;
+        printMenu();      // Показываем меню
+        std::cin >> choice;  // Читаем выбор пользователя
+        
+        // Обрабатываем выбор пользователя
         switch (choice) {
             case 1: {
+                // Добавление пятиугольника
                 std::cout << "Enter pentagon side length: ";
                 double side;
                 std::cin >> side;
@@ -35,6 +40,7 @@ int main(){
                 break;
             }
             case 2: {
+                // Добавление шестиугольника
                 std::cout << "Enter hexagon side length: ";
                 double side;
                 std::cin >> side;
@@ -43,6 +49,7 @@ int main(){
                 break;
             }
             case 3: {
+                // Добавление восьмиугольника
                 std::cout << "Enter octagon side length: ";
                 double side;
                 std::cin >> side;
@@ -51,6 +58,7 @@ int main(){
                 break;
             }
             case 4: {
+                // Удаление фигуры по индексу
                 if (figures.size() == 0) {
                     std::cout << "No figures to remove!" << std::endl;
                     break;
@@ -67,14 +75,16 @@ int main(){
                 break;
             }
             case 5: {
+                // Вывод всех фигур
                 if (figures.size() == 0) {
                     std::cout << "No figures to display!" << std::endl;
                 } else {
-                    std::cout << figures;
+                    std::cout << figures;  // Используем перегруженный оператор <<
                 }
                 break;
             }
             case 6: {
+                // Вывод геометрических центров всех фигур
                 if (figures.size() == 0) {
                     std::cout << "No figures to display!" << std::endl;
                 } else {
@@ -83,6 +93,7 @@ int main(){
                 break;
             }
             case 7: {
+                // Вывод площадей всех фигур
                 if (figures.size() == 0) {
                     std::cout << "No figures to display!" << std::endl;
                 } else {
@@ -91,6 +102,7 @@ int main(){
                 break;
             }
             case 8: {
+                // Вывод общей площади всех фигур
                 if (figures.size() == 0) {
                     std::cout << "No figures to calculate total area!" << std::endl;
                 } else {
@@ -100,10 +112,12 @@ int main(){
                 break;
             }
             case 9: {
+                // Выход из программы
                 std::cout << "Goodbye!" << std::endl;
                 return 0;
             }
             default: {
+                // Неверный ввод
                 std::cout << "Invalid choice! Please try again." << std::endl;
                 break;
             }
