@@ -5,7 +5,7 @@
 #include "Array.h"
 #include <memory>
 #include <cmath>
-
+#гугл тесты 
 TEST(PentagonTest, BasicArea) {
     Pentagon pentagon(5.0);
     double expected_area = (5.0 * 5.0 * 5.0) / (4.0 * std::tan(M_PI / 5.0));
